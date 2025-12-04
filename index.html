@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+  <title>Jeová Gabriel | Designer</title>
+<link rel="icon" type="image/png" sizes="32x32" href="Logo 2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="Logo192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="Logo180.png">
+<meta name="msapplication-TileImage" content="Logo270.png">
+
+  <style>
+    /* Reset simples */
+    * { box-sizing: border-box; }
+    html,body { height: 100%; margin:0; padding:0; }
+
+/* fundo padrão desktop */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+    /* Container central com largura máxima */
+    .container {
+      width:100%;
+      max-width:560px;
+      position:relative;
+      text-align:center;
+    }
+
+    /* Imagem de perfil / capa */
+    .img-wrapper {
+      padding: 15%;
+      position:relative;
+      border-radius:16px;
+      display: block;
+    }
+
+    .profile-img {
+
+      width:100%;
+      height:auto;
+      border-radius:16px;
+    }
+
+    /* BOTÃO WHATSAPP */
+    .btn-whatsapp {
+      position:absolute;
+      left:50%;
+      top: 824px;
+      /* Posicionamento vertical relativo ao wrapper: ajustar conforme necessário */
+      bottom:18px;
+      transform:translateX(-50%);
+      width:84%;
+      max-width:420px;
+      height: 68px;
+      display:inline-flex;
+      gap:12px;
+      align-items:center;
+      justify-content:center;
+      padding:0 20px;
+      font-size:22px;
+      font-weight:700;
+      text-decoration:none;
+      border-radius:50px;
+      border:2px solid rgba(255,255,255,0.9);
+      cursor:pointer;
+
+      overflow:hidden; /* necessário para o ::before não escapar */
+      z-index:4;
+      transition:transform .22s ease, box-shadow .22s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Degradê por trás do conteúdo do botão */
+    .btn-whatsapp::before {
+      content:"";
+      position:absolute;
+      top:0;
+      left:-110%;
+      width:220%; /* cobre completamente e permite animação */
+      height:100%;
+      background: linear-gradient(90deg, #a2fa08 0%, #7be06a 35%, #2cbf79 100%);
+      transition: transform .45s cubic-bezier(.2,.9,.3,1), left .35s ease;
+      z-index:1; /* atrás do texto e ícone */
+      opacity:0.98;
+      transform: translateX(0);
+      pointer-events:none;
+    }
+
+    /* Conteúdo do botão (texto + ícone) sempre acima do ::before */
+    .btn-whatsapp > * {
+      color: #ffffff;
+      position:relative;
+      z-index:3;
+      display:inline-flex;
+      align-items:center;
+    }
+
+    /* Ícone */
+    .btn-whatsapp img {
+      object-fit:contain;
+      opacity:1;               /* sempre visível */
+      filter: brightness(1);   /* deixe como estiver no PNG */
+      display:block;
+    }
+
+    /* Texto */
+    .btn-whatsapp .label {
+      margin-left:6px;
+      color:#000000;
+      font-family: made tommy, sans-serif;
+      -webkit-font-smoothing:antialiased;
+      letter-spacing:0.2px;
+    }
+
+    /* Hover / focus / active - faz o degradê cobrir todo o botão e dá leve scale */
+    .btn-whatsapp:hover,
+    .btn-whatsapp:focus,
+    .btn-whatsapp:active {
+      transform: translateX(-50%) scale(1.03);
+      outline: none;
+    }
+
+    /* Move o ::before para cobrir o botão */
+    .btn-whatsapp:hover::before,
+    .btn-whatsapp:focus::before,
+    .btn-whatsapp:active::before {
+      left:0;
+      transform: translateX(0);
+    }
+     .btn-whatsapp img { width:auto; height:30px; position: static;}
+      .img-wrapper {
+        padding: 0%;
+      }
+
+    /* Para telas pequenas */
+    @media (max-width:768px) {
+      .btn-whatsapp {
+        position: absolute;
+        top: 435px;
+        width:80%;
+        height:45px;
+        font-size:14px; font-display:swap;
+        border-width:1px;
+        border-color: #ffffff;
+        padding:20 14px;
+        gap: 2px;
+        margin: 0;
+        padding: 0%;
+        background-color: #000000;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+    @media (max-width:768px) {
+      .btn-whatsapp img { width:auto; height:18px; position: static;}
+      .img-wrapper {
+        padding: 0%;
+      }
+    }
+  }
+  </style>
+<head>
+<body>
+  <div class="container">
+
+    <div class="img-wrapper">
+      <!-- imagem principal -->
+      <img src="20251203_113457.jpg" class="profile-img" alt="Foto de Jeová Gabriel">
+
+      <!-- botão whatsapp: open in new tab, aria-label para acessibilidade -->
+      <a class="btn-whatsapp" href="https://wa.me/5583998093245" target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp">
+        <img src="logo whatsapp.png" alt="WhatsApp">
+        <span class="label">Chamar no WhatsApp</span> 
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>
