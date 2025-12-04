@@ -138,33 +138,34 @@ body {
       .img-wrapper {
         padding: 0%;
       }
+/* Para telas pequenas */
+@media (max-width: 768px) {
 
-    /* Para telas pequenas */
-    @media (max-width:768px) {
-      .btn-whatsapp {
-        position: absolute;
-        top: 435px;
-        width:80%;
-        height:45px;
-        font-size:14px; font-display:swap;
-        border-width:1px;
-        border-color: #ffffff;
-        padding:20 14px;
-        gap: 2px;
-        margin: 0;
-        padding: 0%;
-        background-color: #000000;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-}
-    @media (max-width:768px) {
-      .btn-whatsapp img { width:auto; height:18px; position: static;}
-      .img-wrapper {
-        padding: 0%;
-      }
-    }
+  .btn-whatsapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 82%;
+    width: 80%;
+    height: 50px;
+    font-size: 14px;
+    border: 1px solid #ffffff;
+    margin: 0 auto;          /* centraliza */
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
+
+  .btn-whatsapp img {
+    width: auto;
+    height: 18px;
+  }
+
+  .img-wrapper {
+    padding: 0;
+  }
+}
   </style>
 <head>
 <body>
